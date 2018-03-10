@@ -4,15 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.alem.einzelbeispielpalindrom.MainActivity">
+    tools:context="com.example.alem.einzelbeispielpalindrom.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
+        android:id="@+id/palindromTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="33dp"
+        android:text="@string/palindrom"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/inputField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="143dp"
+        android:ems="10"
+        android:hint="@string/string_5_zeichen"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/eingabeString"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/eingabeString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/eingabe_string"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/inputField"
+        app:layout_constraintEnd_toStartOf="@+id/inputField"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:textColor="?attr/colorPrimaryDark" />
+
+    <Button
+        android:id="@+id/buttonCheckString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="41dp"
+        android:text="@string/check_string"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/inputField"
+        app:layout_constraintTop_toBottomOf="@+id/inputField" />
+
+    <EditText
+        android:id="@+id/ergebnis"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:ems="10"
+        android:inputType="text"
+        android:labelFor="@id/ergebnis"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ergebnisTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ergebnisTextView" />
+
+    <TextView
+        android:id="@+id/ergebnisTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="135dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="26dp"
+        android:text="@string/ergebnis"
+        android:textColor="?attr/colorPrimaryDark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ergebnis"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

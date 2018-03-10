@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">EinzelbeispielPalindrom</string>
+    <string name="palindrom">Palindrom?</string>
+    <string name="ergebnis">Ergebnis:</string>
+    <string name="check_string">Check String</string>
+    <string name="eingabe_string">Eingabe String:</string>
+    <string name="string_5_zeichen"><![CDATA[String >= 5 Zeichen]]></string>
 </resources>
