@@ -29,11 +29,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String palindromString = result.getText().toString();
+                String palindromString = input.getText().toString().trim();
 
+
+                if (isPalindrome(palindromString)) {
+                    result.setText(palindromString + " " + "ist ein Palindrom!");
+                } else {
+                    result.setText(palindromString + " " + "ist kein Palindrom!");
+                }
             }
         });
     }
+
+    public static boolean isPalindrome(String str) {
+        return str.equals(new StringBuilder(str).reverse().toString());
+    }
 }
+
 
 
