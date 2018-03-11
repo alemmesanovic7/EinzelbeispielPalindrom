@@ -32,10 +32,19 @@ public class MainActivity extends AppCompatActivity {
                 String palindromString = input.getText().toString().trim();
 
 
-                if (isPalindrome(palindromString)) {
-                    result.setText(palindromString + " " + "ist ein Palindrom!");
+                if (palindromString.isEmpty()) {
+                    input.setError("Bitte geben Sie einen Wert ein!");
                 } else {
-                    result.setText(palindromString + " " + "ist kein Palindrom!");
+                    if (palindromString.length() < 5) {
+                        input.setError("Es muss 5 oder mehr Zeichen haben!");
+                        Toast.makeText(MainActivity.this, "Versuchen Sie es nocheinmal!", Toast.LENGTH_SHORT).show();
+                    } else {
+                        if (isPalindrome(palindromString)) {
+                            result.setText(palindromString + " " + "ist ein Palindrom!");
+                        } else {
+                            result.setText(palindromString + " " + "ist kein Palindrom!");
+                        }
+                    }
                 }
             }
         });
