@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
                 String palindromString = input.getText().toString().trim();
 
+                result.setText(null);
 
                 if (palindromString.isEmpty()) {
                     input.setError("Bitte geben Sie einen Wert ein!");
